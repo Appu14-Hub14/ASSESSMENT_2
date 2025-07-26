@@ -1,21 +1,17 @@
 #include <stdio.h>
 
 int main() {
-    int num, i;
-    unsigned long long factorial = 1;
+    int num;
 
-    // Input from user
-    printf("Enter a positive integer: ");
+    // Get input from user
+    printf("Enter an integer: ");
     scanf("%d", &num);
 
-    // Check for valid input
-    if (num < 0) {
-        printf("Error! Factorial of a negative number doesn't exist.\n");
+    // Check whether the number is even or odd
+    if (num % 2 == 0) {
+        printf("%d is an Even number.\n", num);
     } else {
-        for (i = 1; i <= num; ++i) {
-            factorial *= i;
-        }
-        printf("Factorial of %d = %llu\n", num, factorial);
+        printf("%d is an Odd number.\n", num);
     }
 
     return 0;
